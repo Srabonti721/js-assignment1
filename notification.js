@@ -1,16 +1,12 @@
 function sendNotification(email) {
-    if(email.includes("@")){
-
+    if (email.includes("@")) {
+        const splitEmail = email.split("@");
+        const newEmail = splitEmail[0] + "  sent you an email from " + splitEmail[1];
+        return newEmail;
     }
-    else{
+    else {
         return "Invalid Email";
     }
 }
-const mail = sendNotification ("zihadgmail.com");
+const mail = sendNotification("farhan@34yahoo123.com");
 console.log(mail);
-
-const str = "Brave new world";
-console.log(str.indexOf("w"));     // Output: 8
-console.log(str.indexOf("new"));   // Output: 6
-console.log(str.indexOf("World")); // Output: -1 (due to case sensitivity)
-
